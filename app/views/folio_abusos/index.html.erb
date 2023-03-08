@@ -27,27 +27,26 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>No. Folio</th>
-          <th>Cliente</th>
-          <th>Fecha</th>
-          <th>Acciones</th>
+          <th scope="col">No. Folio</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Acciones</th>
         </tr>
       </thead>
-    <% @folio_abusos.each do |folio_abuso| %>
       <tbody>
-        <tr>
-          <th scope="row"><%= folio_abuso.folio %> </th>
-          <td><%= folio_abuso.cliente %></td>
-          <td><%= folio_abuso.fecha %></td>
-          <td>
-            <%= link_to 'Ver', folio_abuso, class:"btn btn-light min-width-btn" %>
-            <%= link_to 'Editar', edit_folio_abuso_path(folio_abuso), class:"btn btn-primary min-width-btn"  %>     
-            <%= link_to 'Eliminar', folio_abuso , method: :delete, data: { confirm: 'Estas seguro?' }, class:"btn btn-danger min-width-btn"%>
-          </td>
-        </tr>
+        <% @folio_abusos.each do |folio_abuso| %>
+          <tr>
+            <th scope="row"><%= folio_abuso.folio %> </th>
+            <td><%= folio_abuso.cliente %></td>
+            <td><%= folio_abuso.fecha %></td>
+            <td>
+              <%= link_to 'Ver', folio_abuso, class:"btn btn-light min-width-btn" %>
+              <%= link_to 'Editar', edit_folio_abuso_path(folio_abuso), class:"btn btn-primary min-width-btn"  %>     
+              <%= link_to 'Eliminar', folio_abuso , method: :delete, data: { confirm: 'Estas seguro?' }, class:"btn btn-danger min-width-btn"%>
+            </td>
+          </tr>
+        <% end %>
       </tbody>
-
-    <% end %>
     </table>
     <%= will_paginate @folio_abusos %>
   </div>
