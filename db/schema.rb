@@ -11,6 +11,10 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_12_06_221906) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "adminpack"
+  enable_extension "plpgsql"
+
   create_table "abusos", force: :cascade do |t|
     t.string "cliente"
     t.datetime "fecha"
@@ -52,6 +56,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_221906) do
     t.text "descripcion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users_table", id: false, force: :cascade do |t|
+    t.integer "id"
+    t.text "name"
   end
 
 end
