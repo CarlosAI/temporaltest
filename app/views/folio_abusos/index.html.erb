@@ -3,15 +3,23 @@
   <h1>Folios</h1>
   <br>
 
-  <%= link_to "Registar nuevo Folio", new_folio_abuso_path, class:"btn btn-info min-width-btn" %>
+  
   <br>
   <br>
-  <div>     
-    <%= form_for :folio_abuso, method: :get do |f| %>  
-    <%= label_tag :filtro, nil, class: "sr-only" %>
-    <input type="text" name="filtro" id="filtro" value="" placeholder="Buscar" bind="query" class="form-control ">
-    <button class="btn btn-warning">Buscar</button>
-    <% end %>
+
+  <div class="row">
+    <div class="column">
+      <%= link_to "Registar nuevo Folio", new_folio_abuso_path, class:"btn btn-info min-width-btn" %>
+    </div>
+    <div class="column">
+      <%= form_for :folio_abuso, method: :get do |f| %>  
+        <%= label_tag :filtro, nil, class: "sr-only" %>
+        <input type="text" name="filtro" id="filtro" value="" placeholder="Buscar" bind="query" class="form-control ">
+      <% end %>
+    </div>
+    <div class="column">
+      <button class="btn btn-warning">Buscar</button>
+    </div>
   </div>
   <br>
   <div id="folio_abusos">
