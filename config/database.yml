@@ -19,5 +19,5 @@ test:
 production:
   <<: *default
   database: proyectoprueba_production
-  username: postgres
+  username: proyectoprueba
   password: <%= ENV['PROYECTOPRUEBA_DATABASE_PASSWORD'] %>
