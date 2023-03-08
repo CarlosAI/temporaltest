@@ -9,7 +9,5 @@
     "sass": "^1.56.1"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "postinstall": "yarn build:css"
   }
 }
