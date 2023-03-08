@@ -49,7 +49,7 @@ class FolioAbusosController < ApplicationController
       if @folio_abuso.save
         @folio_abuso.folio = "#{'0'*(5-(@folio_abuso.id.to_s.size.to_i))}#{@folio_abuso.id}-#{Time.now.to_i}"
         @folio_abuso.save
-        format.html { redirect_to folio_abuso_url(@folio_abuso), notice: "Folio abuso was successfully created." }
+        format.html { redirect_to folio_abuso_url(@folio_abuso), notice: "El folio se creo correctamente" }
         format.json { render :show, status: :created, location: @folio_abuso }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -62,7 +62,7 @@ class FolioAbusosController < ApplicationController
   def update
     respond_to do |format|
       if @folio_abuso.update(folio_abuso_params)
-        format.html { redirect_to folio_abuso_url(@folio_abuso), notice: "Folio abuso was successfully updated." }
+        format.html { redirect_to folio_abuso_url(@folio_abuso), notice: "Folio actualizado" }
         format.json { render :show, status: :ok, location: @folio_abuso }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -76,7 +76,7 @@ class FolioAbusosController < ApplicationController
     @folio_abuso.destroy
 
     respond_to do |format|
-      format.html { redirect_to folio_abusos_url, notice: "Folio abuso was successfully destroyed." }
+      format.html { redirect_to folio_abuso_url, notice: "Folio eliminado" }
       format.json { head :no_content }
     end
   end

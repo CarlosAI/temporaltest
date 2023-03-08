@@ -43,6 +43,18 @@
               <%= link_to 'Ver', folio_abuso, class:"btn btn-light min-width-btn" %>
               <%= link_to 'Editar', edit_folio_abuso_path(folio_abuso), class:"btn btn-primary min-width-btn"  %>     
               <%= link_to 'Eliminar', folio_abuso , method: :delete, data: { confirm: 'Estas seguro?' }, class:"btn btn-danger min-width-btn"%>
+
+              <!-- Example single danger button -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Accion
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="<%= folio_abusos_path(folio_abuso) %>">Ver</a></li>
+                  <li><a class="dropdown-item" href="<%= edit_folio_abuso_path(folio_abuso) %>">Editar</a></li>
+                  <li><a class="dropdown-item" href="<%= folio_abuso %>", method="delete", data=" { confirm: 'Estas seguro?' }">Eliminar</a></li>
+                </ul>
+              </div>
             </td>
           </tr>
         <% end %>

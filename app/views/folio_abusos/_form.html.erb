@@ -23,8 +23,10 @@
       </div>
 
       <div class="form-group col-sm">
-        <%= form.label :fecha, style: "display: block" %>
-        <%= form.datetime_field :fecha, class:"form-control" %>
+        <div class="form-floating">
+          <%= form.datetime_field :fecha, class:"form-control", id:"fechaid" %>
+          <label for="fechaid">Fecha</label>
+        </div>
       </div>
     </div>
 
@@ -32,8 +34,11 @@
 
 
       <div class="form-group col-sm">
-        <%= form.label :unidad, style: "display: block" %>
-        <%= form.text_field :unidad, class:"form-control" %>
+
+         <div class="form-floating">
+          <%= form.text_field :unidad, class:"form-control", id:"unidadid", placeholder:"Nissan" %>
+          <label for="unidadid">Unidad</label>
+        </div>
       </div>
 
       <div class="form-group col-sm">
@@ -46,38 +51,46 @@
 
     <div class="row">
       <div class="form-group col-sm">
-        <%= form.label :operador, style: "display: block" %>
-        <%= form.text_field :operador, class:"form-control" %>
+        <div class="form-floating">
+          <%= form.text_field :operador, class:"form-control", id:"operadorid", placeholder:"Charlie" %>
+          <label for="operadorid">Operador</label>
+        </div>
       </div>
 
       <div class="form-group col-sm">
         <%= form.label :tipo_abuso, style: "display: block" %>
         <% options = options_from_collection_for_select(@abusos, 'id', 'tipo_abuso') %>
-        <%= form.select :tipo_abuso,  options, class:"form-select"  %>
+        <%= form.select :tipo_abuso,  options, class:"form-select form-select-lg mb-3"  %>
       </div>
 
     </div>
 
     <div class="row">
       <div class="form-group col-sm">
-        <%= form.label :abuso_presentado, style: "display: block" %>
-        <%= form.text_area :abuso_presentado, class:"form-control" %>
+        <div class="form-floating">
+          <%= form.text_area :abuso_presentado, class:"form-control", id:"abuso_presentadoid", placeholder:"Charlie" %>
+          <label for="abuso_presentadoid">Informe</label>
+        </div>
       </div>
     </div>
 
     <div class="row">
       <div class="form-group col-sm">
-        <%= form.label :costo_total, style: "display: block" %>
-        <%= form.text_field :costo_total, class:"form-control" %>
+        <div class="form-floating">
+          <%= form.text_field :costo_total, class:"form-control", id:"costo_totalid", placeholder:"Charlie" %>
+          <label for="costo_totalid">Costo total</label>
+        </div>
       </div>
 
       <div class="form-group col-sm">
-        <%= form.label :reporta, style: "display: block" %>
-        <%= form.text_field :reporta, class:"form-control" %>
+        <div class="form-floating">
+          <%= form.text_field :reporta, class:"form-control", id:"reportaid", placeholder:"Charlie" %>
+          <label for="reportaid">Reporta</label>
+        </div>
       </div>
     </div>
 
-
+    <br>
     <div class="actions">
       <%= form.submit "Registrar", class: 'btn btn-success btn-lg btn-block' %>
     </div>
