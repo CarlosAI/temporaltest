@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente: MyString
+  fecha: 2022-12-06 14:50:43
+  unidad: MyString
+  tipo_contrato: 1
+  operador: MyString
+  tipo_abuso: 1
+  abuso_presentado: MyText
+  costo_total: 1.5
+  reporta: 1
+
+two:
+  cliente: MyString
+  fecha: 2022-12-06 14:50:43
+  unidad: MyString
+  tipo_contrato: 1
+  operador: MyString
+  tipo_abuso: 1
+  abuso_presentado: MyText
+  costo_total: 1.5
+  reporta: 1

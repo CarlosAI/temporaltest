@@ -1,0 +1,16 @@
+
+<div class="container-fluid">
+  <center>
+    <h1>Editar Folio <%= @folio_abuso.folio%> </h1>
+  </center>
+    
+
+  <%= render "form", folio_abuso: @folio_abuso %>
+
+  <br>
+
+  <div>
+    <%= link_to "Mostrar Folio", @folio_abuso %> |
+    <%= link_to "Regresar al menu anterior", folio_abusos_path %>
+  </div>
+</div>

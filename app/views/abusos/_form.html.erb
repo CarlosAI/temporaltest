@@ -1,0 +1,62 @@
+<%= form_with(model: abuso) do |form| %>
+  <% if abuso.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(abuso.errors.count, "error") %> prohibited this abuso from being saved:</h2>
+
+      <ul>
+        <% abuso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :cliente, style: "display: block" %>
+    <%= form.text_field :cliente %>
+  </div>
+
+  <div>
+    <%= form.label :fecha, style: "display: block" %>
+    <%= form.datetime_field :fecha %>
+  </div>
+
+  <div>
+    <%= form.label :unidad, style: "display: block" %>
+    <%= form.text_field :unidad %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_contrato, style: "display: block" %>
+    <%= form.number_field :tipo_contrato %>
+  </div>
+
+  <div>
+    <%= form.label :operador, style: "display: block" %>
+    <%= form.text_field :operador %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_abuso, style: "display: block" %>
+    <%= form.number_field :tipo_abuso %>
+  </div>
+
+  <div>
+    <%= form.label :abuso_presentado, style: "display: block" %>
+    <%= form.text_area :abuso_presentado %>
+  </div>
+
+  <div>
+    <%= form.label :costo_total, style: "display: block" %>
+    <%= form.text_field :costo_total %>
+  </div>
+
+  <div>
+    <%= form.label :reporta, style: "display: block" %>
+    <%= form.number_field :reporta %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

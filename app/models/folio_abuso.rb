@@ -1,0 +1,2 @@
+class FolioAbuso < ApplicationRecord
+end

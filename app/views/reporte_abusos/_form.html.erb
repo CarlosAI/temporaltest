@@ -1,0 +1,27 @@
+<%= form_with(model: reporte_abuso) do |form| %>
+  <% if reporte_abuso.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reporte_abuso.errors.count, "error") %> prohibited this reporte_abuso from being saved:</h2>
+
+      <ul>
+        <% reporte_abuso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :tipo_abuso, style: "display: block" %>
+    <%= form.text_field :tipo_abuso %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

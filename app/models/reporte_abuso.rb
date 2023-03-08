@@ -1,0 +1,2 @@
+class ReporteAbuso < ApplicationRecord
+end
