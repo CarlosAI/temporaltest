@@ -40,19 +40,15 @@
             <td><%= folio_abuso.cliente %></td>
             <td><%= folio_abuso.fecha %></td>
             <td>
-              <%= link_to 'Ver', folio_abuso, class:"btn btn-light min-width-btn" %>
-              <%= link_to 'Editar', edit_folio_abuso_path(folio_abuso), class:"btn btn-primary min-width-btn"  %>     
-              <%= link_to 'Eliminar', folio_abuso , method: :delete, data: { confirm: 'Estas seguro?' }, class:"btn btn-danger min-width-btn"%>
-
               <!-- Example single danger button -->
               <div class="btn-group">
-                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   Accion
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="<%= folio_abusos_path(folio_abuso) %>">Ver</a></li>
+                  <%= link_to 'Ver', folio_abuso, class:"dropdown-item" %>
                   <li><a class="dropdown-item" href="<%= edit_folio_abuso_path(folio_abuso) %>">Editar</a></li>
-                  <li><a class="dropdown-item" href="<%= folio_abuso %>", method="delete", data=" { confirm: 'Estas seguro?' }">Eliminar</a></li>
+                  <%= link_to 'Eliminar', folio_abuso , method: :delete, data: { confirm: 'Estas seguro?' }, class:"dropdown-item"%>
                 </ul>
               </div>
             </td>
@@ -61,5 +57,19 @@
       </tbody>
     </table>
     <%= will_paginate @folio_abusos %>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
   </div>
 </div>
