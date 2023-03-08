@@ -9,5 +9,6 @@
     "sass": "^1.56.1"
   },
   "scripts": {
+    "build:css": "sass app/assets/stylesheets/application.scss"
   }
 }
