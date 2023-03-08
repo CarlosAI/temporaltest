@@ -9,6 +9,7 @@
     "sass": "^1.56.1"
   },
   "scripts": {
+    "build": "esbuild app/assets/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     "build:css": "sass app/assets/stylesheets/application.scss"
   }
 }

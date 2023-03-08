@@ -14,17 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Invariant Violation: Script must exist
-      at invariant (C:\Program Files (x86)\Yarn\lib\cli.js:2318:15)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:61545:11
+  SyntaxError: C:\Users\carlo\proyectoprueba\package.json: Unexpected token } in JSON at position 420
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1629:59
       at Generator.next (<anonymous>)
       at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:328:14
-      at new Promise (<anonymous>)
-      at new F (C:\Program Files (x86)\Yarn\lib\cli.js:5305:28)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:307:12
-      at realRunCommand (C:\Program Files (x86)\Yarn\lib\cli.js:61630:23)
-      at action.action (C:\Program Files (x86)\Yarn\lib\cli.js:61691:16)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
@@ -38,8 +33,8 @@ npm manifest:
       "sass": "^1.56.1"
     },
     "scripts": {
-      "build": "",
-      "postinstall": "yarn build:css"
+      "build:css": "sass app/assets/stylesheets/application.scss",
+      "build": "esbuild app/assets/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     }
   }
 
