@@ -25,7 +25,7 @@
         <div class="form-group col-sm">
           <%= form.label :tipo_contrato, style: "display: block" %>
           <% options = options_from_collection_for_select(@el_contrato, 'id', 'tipo_contrato') %>
-          <%= form.select :tipo_contrato,  options, class:"form-control"  %>
+          <%= form.select :tipo_contrato,  options, class:"form-select"  %>
         </div>
 
       </div>
